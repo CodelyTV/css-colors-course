@@ -1,0 +1,25 @@
+name: Accessibility check
+on: [push]
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+
+    env:
+      working-directory: ./02-working-with-colors/2-a11y
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: 'npm'
+          cache-dependency-path: ./02-working-with-colors/2-a11y/package-lock.json
+
+      - name: Install Dependencies
+        run: npm install && npm install -g @lhci/cli@0.8.x
+        working-directory: ${{env.working-directory}}
+
+      - name: Run lighthouse
+        run: lhci autorun --collect.staticDistDir=./
+        working-directory: ${{env.working-directory}}

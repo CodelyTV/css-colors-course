@@ -1,0 +1,41 @@
+/* HSL */
+:root {
+  --hue: 270deg;
+}
+
+body {
+  background: hsl(var(--hue) 0% 100%);
+  font-family: sans-serif;
+}
+
+h1 {
+  color: hsl(var(--hue) 50% 10%);
+}
+
+button {
+  padding: .5rem;
+  border: none;
+  background: hsl(var(--hue) 50% 10%);
+  color: hsl(var(--hue) 50% 50%);
+}
+
+/* LCH */
+/* :root {
+  --hue: 300deg;
+}
+
+body {
+  background: lch(100% 0 var(--hue));
+  font-family: sans-serif;
+}
+
+h1 {
+  color: lch(10% 60 var(--hue));;
+}
+
+button {
+  padding: .5rem;
+  border: none;
+  background: lch(10% 60 var(--hue));
+  color: lch(60% 60 var(--hue));
+} */
