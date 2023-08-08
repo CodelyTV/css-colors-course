@@ -1,0 +1,9 @@
+body {
+  background: lch(85.06% 108.69 135deg);
+}
+
+@media (color-gamut: p3) {
+  body {
+    background: lch(85.15% 138.23 135deg);
+  }
+}
