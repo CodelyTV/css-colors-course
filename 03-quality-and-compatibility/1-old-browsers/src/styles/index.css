@@ -1,0 +1,50 @@
+:root {
+  --primary-color: oklch(64% 0.25 350);
+  --secondary-color: oklch(64% 0.25 320);
+  --light-color: oklch(97% 0.02 350);
+  --dark-color: oklch(5% 0.02 350);
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.light {
+  color: var(--dark-color);
+  background: var(--light-color);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  padding: .3rem .5rem;
+  font-size: 1.5rem;
+}
+
+.button--primary {
+  background-color: var(--primary-color);
+}
+
+.button--secondary {
+  background-color: var(--secondary-color);
+}
