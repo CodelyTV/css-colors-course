@@ -1,0 +1,11 @@
+{
+  "name": "css-colors-course",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server": "live-server --host=localhost --port=3000"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

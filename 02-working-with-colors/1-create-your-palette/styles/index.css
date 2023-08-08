@@ -1,0 +1,62 @@
+:root {
+  --hue: 335;
+  --complimentary: 180;
+  --split-complimentary: 150;
+  --triadic: 120;
+  --analogous: 30;
+  --tetradic: calc(var(--analogous) + var(--complimentary));
+  --secondary-hue: calc(var(--hue) + var(--complimentary));
+  --primary-color: lch(55% 80 var(--hue));
+  --secondary-color: lch(55% 80 var(--secondary-hue));
+  --light-color:  lch(100% 10 var(--hue));
+  --dark-color: lch(10% 10 var(--hue));
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 1rem;
+  min-height: 50vh;
+}
+
+.light {
+  color: var(--dark-color);
+  background: var(--light-color);
+}
+
+.dark {
+  color: var(--light-color);
+  background: var(--dark-color);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  padding: .3rem .5rem;
+  font-size: 1.5rem;
+}
+
+.button--primary {
+  background-color: var(--primary-color);
+}
+
+.button--secondary {
+  background-color: var(--secondary-color);
+}
